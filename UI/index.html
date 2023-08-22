@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celebrity Face Recognizer</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./dropzone.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">Sportsperson Classifier</nav>
+    <div class="container">
+        <div class="card" data-player="lionel_messi">
+            <div class="img_card">
+                <img class="image" src="./test/messi.jpg" alt="Messi.jpg">
+                <p class="name">Lionel Messi</p>
+            </div>
+        </div>
+
+        <div class="card" data-player="Ronaldo">
+            <div class="img_card">
+                <img class="image" src="./test/ronaldo.jpg" alt="Ronaldo.jpg">
+                <p class="name">Cristiano Ronaldo</p>
+            </div>
+        </div>
+
+        <div class="card" data-player="neymar">
+            <div class="img_card">
+                <img class="image" src="./test/ney.jpg" alt="Neymar.jpg">
+                <p class="name">Neymar Jr</p>
+            </div>
+        </div>
+
+        <div class="card" data-player="mbappe">
+            <div class="img_card">
+                <img class="image" src="./test/mbp2.jpg" alt="Mbappe.jpg">
+                <p class="name">Kylian Mbappe</p>
+            </div>
+        </div>
+
+        <div class="card" data-player="virat_kohli">
+            <div class="img_card">
+                <img class="image" src="./test/virat.jpg" alt="Virat.jpg">
+                <p class="name">Virat Kohli</p>
+            </div>
+        </div>
+
+        <div class="card" data-player="ms_dhoni">
+            <div class="img_card">
+                <img class="image" src="./test/msd.jpg" alt="Dhoni.jpg">
+                <p class="name">MS Dhoni</p>
+            </div>
+        </div>
+
+        <div class="card" data-player="rohit_sharma">
+            <div class="img_card">
+                <img class="image" src="./test/rohit.jpg" alt="Rohit.jpg">
+                <p class="name">Rohit Sharma</p>
+            </div>
+        </div>
+    </div>
+    <div class="formsub">
+        <div class="upload">
+            <form class="dropzone" id="dropzone" action="/file-upload">
+                <div class="dz-message needsclick">
+                    <img id="upld" src="./upload.png" width="50vw" height="50vw"><br>
+                    <span class="note needsclick">Drop files here or click to upload</span>
+                </div>
+            </form>
+        </div>
+
+        <div class="error" id="error" >
+            <p>Can't classify image. Classifier was not able to detect face and two eyes properly</p>    
+        </div>
+
+        <div class="col-sm-4" id="resultHolder">
+        </div>
+        <div class="col-sm-4" id="divClassTable">
+            <table id="classTable">
+                    <tr>
+                        <th>Player</th>
+                        <th>Probability Score</th>
+                    </tr>
+                    <tr>
+                        <td>Lionel Messi</td>
+                        <td id="score_lionel_messi"></td>
+                    </tr>
+                    <tr>
+                        <td>MBappe</td>
+                        <td id="score_mbappe"></td>
+                    </tr>
+                    <tr>
+                        <td>MS Dhoni</td>
+                        <td id="score_ms_dhoni"></td>
+                    </tr>
+                    <tr>
+                        <td>Neymar</td>
+                        <td id="score_neymar"></td>
+                    </tr>
+                    <tr>
+                        <td>Rohit Sharma</td>
+                        <td id="score_rohit_sharma"></td>
+                    </tr>
+                    <tr>
+                        <td>Ronaldo</td>
+                        <td id="score_Ronaldo"></td>
+                    </tr>
+                    <tr>
+                        <td>Virat Kohli</td>
+                        <td id="score_virat_kohli"></td>
+                    </tr>
+            </table>
+        </div>
+    </div>
+    <div class="button">
+        <button id="submitBtn" class="btn" type="button">Classify</button>
+    </div><br><br>
+
+</body>
+<!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="./dropzone.min.js"></script>
+<script src="./app.js"></script>
+</html>
