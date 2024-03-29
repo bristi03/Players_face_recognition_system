@@ -1,16 +1,16 @@
 {
     "version": 2,
     "builds": [
-        {
-            "src": "*.py",
-            "use": "@vercel/python"
-        }
+      {
+        "src": "server/server.py",
+        "use": "@vercel/python"
+      }
     ],
     "regions":["bom1"],
     "routes": [
-        {
-            "src": "(.*)",
-            "dest": "server.py"
-        }
+      {
+        "src": "/(.*)",
+        "dest": "server/server.py"
+      }
     ]
-}
+  }
