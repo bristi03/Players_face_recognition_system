@@ -1,16 +1,19 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "server/server.py",
-        "use": "@vercel/python"
-      }
-    ],
-    "regions":["bom1"],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "server/server.py"
-      }
-    ]
-  }
+  "version": 2,
+  "builds": [
+    {
+      "src": "server/server.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "functions": {
+    "runtime": "python3.9"
+  },
+  "regions": ["bom1"],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "server/server.py"
+    }
+  ]
+}
